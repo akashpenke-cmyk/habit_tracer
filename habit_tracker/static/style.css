@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.habit-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.habit-form input {
+    padding: 10px;
+    width: 250px;
+}
+
+.habit-form button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.primary {
+    background: #1976d2;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.warning {
+    background: #ff9800;
+    color: white;
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+.danger {
+    background: #e53935;
+    color: white;
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+.habit-card {
+    background: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.habit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.day {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    text-align: center;
+    line-height: 40px;
+    background: #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.day.done {
+    background: #4CAF50;
+    color: white;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.charts img {
+    width: 40%;
+}
