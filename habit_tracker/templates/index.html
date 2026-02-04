@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📅 Monthly Habit Tracker</h1>
+
+    <form method="POST" class="habit-form">
+        <input type="text" name="habit" placeholder="Enter habit name" required>
+        <button>Add Habit</button>
+        <a href="/reset_month" class="reset-month">Reset Month</a>
+    </form>
+
+    <h3>Overall Accuracy: {{ accuracy }}%</h3>
+
+    <div class="charts">
+        <img src="/static/charts/pie.png">
+        <img src="/static/charts/bar.png">
+    </div>
+
+    {% for habit in habits %}
+    <div class="habit-card">
+        <div class="habit-header">
+            <h2>{{ habit.name }}</h2>
+            <a href="/reset_habit/{{ habit.id }}" class="reset-habit">
+                Reset Habit
+            </a>
+        </div>
+
+        <div class="days">
+            {% for log in habit.logs %}
+                <a href="/toggle/{{ log.id }}"
+                   class="day {{ 'done' if log.status else '' }}">
+                    {{ log.day.day }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
